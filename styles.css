@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background-color: #fe7f2d;
+}
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row {
+    width: auto;
+}
+.joke-text {
+    width: 50%;
+    padding-left: 25%;
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 400%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+  
