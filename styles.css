@@ -17,8 +17,8 @@ body {
     width: auto;
 }
 .joke-text {
-    width: 50%;
-    padding-left: 25%;
+    /* width: 50%;
+    padding-left: 25%; */
     font-family: "Freeman", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -26,5 +26,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: #ffffff;
 }
   

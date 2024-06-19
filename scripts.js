@@ -6,5 +6,18 @@ function httpGet(theUrl)
     return xmlHttp.responseText;
 }
 
-joke = httpGet("https://v2.jokeapi.dev/joke/Any?format=txt&type=single")
-document.getElementById("jokeText").innerHTML = joke
+const getOptions = () => {
+    chrome.storage.sync.get(
+        { bgcolor: null, textColor: null },
+        (items) => {
+            document.body.style.background = items.bgcolor;
+            document.getElementsByClassName("joke-text")[0].style.color = items.textColor
+            document.getElementsByClassName("joke-text")[1].style.color = items.textColor
+        }
+    );
+};
+
+getOptions();
+joke = JSON.parse(httpGet("https://official-joke-api.appspot.com/random_joke"))
+document.getElementById("setupText").innerHTML = joke.setup
+document.getElementById("punchlineText").innerHTML = joke.punchline
